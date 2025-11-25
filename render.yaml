@@ -1,12 +1,13 @@
 services:
   - type: web
-    name: django-api
+    name: team-boards
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn team_bords.wsgi:application
-    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn team_bords.wsgi"
     envVars:
-      - key: DEBUG
-        value: False
       - key: SECRET_KEY
         generateValue: true
+      - key: DEBUG
+        value: false
+      - key: ALLOWED_HOSTS
+        value: team-boards.onrender.com
