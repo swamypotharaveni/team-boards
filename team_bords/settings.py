@@ -13,9 +13,10 @@ if env_path.exists():
 # Security
 SECRET_KEY = os.getenv("SECRET_KEY")
 
-DEBUG = os.getenv("DEBUG", "FALSE").lower() == "true"
+DEBUG = os.getenv("DEBUG", "FALSE").lower() == "True"
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
+ALLOWED_HOSTS=["*"]
+print("ALLOWED_HOSTS:", ALLOWED_HOSTS)
 
 # Database
 DATABASE_URL = os.getenv("DATABASE_URL")
