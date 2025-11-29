@@ -15,8 +15,8 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = os.getenv("DEBUG", "FALSE").lower() == "True"
 
-ALLOWED_HOSTS=["*"]
-print("ALLOWED_HOSTS:", ALLOWED_HOSTS)
+ALLOWED_HOSTS=["*","https://team-boards.onrender.com"]
+# print("ALLOWED_HOSTS:", ALLOWED_HOSTS)
 
 # Database
 DATABASE_URL = os.getenv("DATABASE_URL")
